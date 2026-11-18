@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-17",
+  "pages": 25,
+  "main_sections": 7,
+  "cited_references": 117,
+  "comparison_tables": 8,
+  "spreadsheet_records_checked": 81,
+  "new_papers_added": 34,
+  "latex_compile": "success",
+  "undefined_citation_or_reference": false,
+  "overfull_boxes": 0,
+  "bibtex_warnings": 1,
+  "underfull_spacing_notices": 7,
+  "new_experiments_run": false,
+  "visual_review": "All 25 final pages rendered and inspected as contact sheets; Figs. 1, 4 and 6 additionally inspected at enlarged figure size and on final pages 2, 8 and 21. No clipping, overlap or missing glyphs observed.",
+  "texcount_words": 13084,
+  "pdf_sha256": "13cdef41a08635c6b0eef08a2ca2fbfe4034b79104ef19f3b047b81daf780b76",
+  "template_running_header": "Restored verbatim from original repository template.",
+  "figures": 6,
+  "original_diagrams": 3,
+  "attributed_image_composites": 2,
+  "published_data_plots": 1,
+  "figure_revision": {
+    "replaced_figures": [
+      1,
+      4,
+      6
+    ],
+    "source_assets_verified": 10,
+    "metric_table_rows_verified": 30,
+    "metric_table_numeric_cells_verified": 180,
+    "figure_sources": "figures/ATTRIBUTION.md",
+    "metric_values": "Published Table I values preserved; raw-data sign and DOVER discrepancies documented separately."
+  }
+}

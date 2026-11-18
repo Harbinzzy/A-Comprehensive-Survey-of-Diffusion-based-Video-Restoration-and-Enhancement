@@ -1,0 +1,161 @@
+{
+  "date": "2026-11-17",
+  "attribution": "../ATTRIBUTION.md",
+  "assets": [
+    {
+      "file": "stablevsr_S4_F2_0.png",
+      "size_px": [
+        2561,
+        946
+      ],
+      "citation_key": "stablevsr",
+      "original_figure": "Fig.2",
+      "meaning": "Temporal Conditioning Module, Temporal Texture Guidance, and Frame-wise Bidirectional Sampling; green arrows diffusion time, blue arrows video time",
+      "primary_source": "https://arxiv.org/html/2311.15908v2#S4.F2",
+      "crop_xyxy": null,
+      "sha256": "34197de4ae266915dc122c3e52aeb38b99e477a103c2a8d663e29466fbdfc3b6",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "file": "stablevsr_S5_F6_0.jpg",
+      "size_px": [
+        1280,
+        809
+      ],
+      "citation_key": "stablevsr",
+      "original_figure": "Fig.6 upper example",
+      "meaning": "REDS4 clip 000; x-t profiles of Bicubic, SD x4 Upscaler, RealBasicVSR, StableVSR and Reference; left shows sampled scanline across frames",
+      "primary_source": "https://arxiv.org/html/2311.15908v2#S5.F6",
+      "crop_xyxy": null,
+      "sha256": "b85f5bf09391f3a2a1c4d38b0cf5acc116208f2b52845c565110dcc0516e2682",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "file": "upscale_pipeline_github.png",
+      "size_px": [
+        2962,
+        1232
+      ],
+      "citation_key": "upscale",
+      "original_figure": "Fig.2",
+      "meaning": "Local temporal U-Net, global flow-guided recurrent latent propagation, temporal VAE decoder; frozen/trainable module legend",
+      "primary_source": "https://arxiv.org/html/2312.06640v1#S3.F2",
+      "crop_xyxy": null,
+      "sha256": "5adbbfabddea671758639044473f3fb63b2a49b6f646614be8d23fd8c4490f1c",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "file": "upscale_reds30_wall_bicubic.png",
+      "size_px": [
+        114,
+        114
+      ],
+      "citation_key": "upscale",
+      "original_figure": "Fig.4 upper row",
+      "meaning": "REDS30 brick wall; bicubic; native embedded image extracted from PDF page 7",
+      "primary_source": "https://arxiv.org/html/2312.06640v1#S4.F4",
+      "crop_xyxy": null,
+      "sha256": "e642fdd00d94a93935066aae8231f04e23a09fe5b3e7ae08165847a26c41b819",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "file": "upscale_reds30_wall_gt.png",
+      "size_px": [
+        114,
+        114
+      ],
+      "citation_key": "upscale",
+      "original_figure": "Fig.4 upper row",
+      "meaning": "REDS30 brick wall; gt; native embedded image extracted from PDF page 7",
+      "primary_source": "https://arxiv.org/html/2312.06640v1#S4.F4",
+      "crop_xyxy": null,
+      "sha256": "e0299ff285e9e244faf7dda813257b72c4e13f0b57ca665697bf9b5dd3d04c88",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "file": "upscale_reds30_wall_labeled_group.png",
+      "size_px": [
+        1480,
+        228
+      ],
+      "citation_key": "upscale",
+      "original_figure": "Fig.4 upper row",
+      "meaning": "Rendered complete original comparison including context ROI and source labels; Ours means Upscale-A-Video",
+      "primary_source": "https://arxiv.org/html/2312.06640v1#S4.F4",
+      "crop_xyxy": [
+        150,
+        210,
+        1630,
+        438
+      ],
+      "sha256": "2592adf76ce767f0f8793ee24395b962d210c349c3940ce360d936aee2d5017c",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "file": "upscale_reds30_wall_realbasicvsr.png",
+      "size_px": [
+        114,
+        114
+      ],
+      "citation_key": "upscale",
+      "original_figure": "Fig.4 upper row",
+      "meaning": "REDS30 brick wall; realbasicvsr; native embedded image extracted from PDF page 7",
+      "primary_source": "https://arxiv.org/html/2312.06640v1#S4.F4",
+      "crop_xyxy": null,
+      "sha256": "25cf611773f43a32e4294ed71297471250703b01102ce28dad92c8f4caf7b1a5",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "file": "upscale_reds30_wall_sdx4.png",
+      "size_px": [
+        114,
+        114
+      ],
+      "citation_key": "upscale",
+      "original_figure": "Fig.4 upper row",
+      "meaning": "REDS30 brick wall; sdx4; native embedded image extracted from PDF page 7",
+      "primary_source": "https://arxiv.org/html/2312.06640v1#S4.F4",
+      "crop_xyxy": null,
+      "sha256": "3b0af1b46d8364859c7e431d7e73c1de9c512e090d7b2c7808a7be6bd13e5004",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "file": "upscale_reds30_wall_stablesr.png",
+      "size_px": [
+        114,
+        114
+      ],
+      "citation_key": "upscale",
+      "original_figure": "Fig.4 upper row",
+      "meaning": "REDS30 brick wall; stablesr; native embedded image extracted from PDF page 7",
+      "primary_source": "https://arxiv.org/html/2312.06640v1#S4.F4",
+      "crop_xyxy": null,
+      "sha256": "676cf19c86f71f4176b912173ac4829c44d9b1535fb6a184d3573d213e91dbe1",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "file": "upscale_reds30_wall_upscale_a_video.png",
+      "size_px": [
+        114,
+        114
+      ],
+      "citation_key": "upscale",
+      "original_figure": "Fig.4 upper row",
+      "meaning": "REDS30 brick wall; upscale_a_video; native embedded image extracted from PDF page 7",
+      "primary_source": "https://arxiv.org/html/2312.06640v1#S4.F4",
+      "crop_xyxy": null,
+      "sha256": "f690a46ebccce02a1a7e1a216a151fed632de1000f03bd8beb52f8e2b492d5fb",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}

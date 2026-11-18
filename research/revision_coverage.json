@@ -1,0 +1,18 @@
+{
+  "spreadsheet_records": 81,
+  "already_covered": 47,
+  "newly_added": 34,
+  "cited_sources": 117,
+  "method_matrix_rows": 93,
+  "new_core_methods": 32,
+  "new_adjacent_roles": {
+    "stdpevc": "generative video coding",
+    "dadeblur": "diffusion-assisted degradation synthesis for adaptation"
+  },
+  "metadata_updates": [
+    "vividvr",
+    "infvsr",
+    "zsvd"
+  ],
+  "all_spreadsheet_records_mapped_to_citations": true
+}

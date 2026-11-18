@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "status": "proposal_unexecuted",
+  "track": null,
+  "model": {
+    "name": null,
+    "checkpoint_uri": null,
+    "checkpoint_sha256": null,
+    "backbone_version": null,
+    "prior_type": null,
+    "training_data_provenance": null,
+    "trainable_parameters": null,
+    "total_parameters": null,
+    "teacher_and_training_compute": null,
+    "external_information": []
+  },
+  "data": {
+    "stratum": null,
+    "manifest_sha256": null,
+    "split_unit": "source_sequence",
+    "source_resolution": null,
+    "output_resolution": null,
+    "fps": null,
+    "clip_frames": null,
+    "color_space_and_transfer": null,
+    "degradation_order_and_parameters": [],
+    "degradation_seed": null,
+    "codec_configuration": null,
+    "reference_and_alignment": null
+  },
+  "inference": {
+    "sampler": null,
+    "denoiser_function_evaluations": null,
+    "guidance": null,
+    "seeds": [],
+    "temporal_window": null,
+    "temporal_overlap": null,
+    "spatial_tile": null,
+    "spatial_overlap": null,
+    "future_lookahead_frames": null,
+    "cache_and_reset_policy": null
+  },
+  "measurement": {
+    "metric_versions_and_preprocessing": [],
+    "hardware": null,
+    "precision": null,
+    "batch_size": null,
+    "timing_inclusions": [],
+    "warmup_and_repetitions": null,
+    "human_protocol": null,
+    "uncertainty_unit": "source_sequence"
+  }
+}

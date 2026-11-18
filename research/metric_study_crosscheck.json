@@ -1,0 +1,518 @@
+{
+  "purpose": "Reproduction check only; plot the published Table I values in metric_data.csv, not these derived values.",
+  "repo_commit": "d81eea1f0ef899390e9541b294e5973fb281e92c",
+  "rows_total": 222,
+  "rows_excluding_original_sources": 216,
+  "checks": [
+    {
+      "metric": "PSNR",
+      "raw_key": "psnr",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.4662719001093473,
+        "daydreamer": 0.4152450045039985,
+        "giftmord": 0.18631302992784057,
+        "sparks15": 0.5879099582681331,
+        "vegetables": 0.5157095713686104,
+        "water": 0.7506605758177559
+      },
+      "raw_within_fisher_srcc": 0.5073778169360185,
+      "raw_overall_srcc": 0.46554926063069535,
+      "table_within_srcc": 0.507,
+      "table_overall_srcc": 0.466,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "PSNR-HVS",
+      "raw_key": "psnr-hvs",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.4598352366622276,
+        "daydreamer": 0.4888946611168007,
+        "giftmord": 0.2603489609634372,
+        "sparks15": 0.6760771171050992,
+        "vegetables": 0.5278136162396838,
+        "water": 0.7223191777261295
+      },
+      "raw_within_fisher_srcc": 0.5393737175825537,
+      "raw_overall_srcc": 0.47612571663010916,
+      "table_within_srcc": 0.539,
+      "table_overall_srcc": 0.476,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "SSIM",
+      "raw_key": "ssim",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.48738415621589976,
+        "daydreamer": 0.799716813325375,
+        "giftmord": 0.6104423461561107,
+        "sparks15": 0.8607898928556439,
+        "vegetables": 0.7956478006208847,
+        "water": 0.8588731867130561
+      },
+      "raw_within_fisher_srcc": 0.7624421483668892,
+      "raw_overall_srcc": 0.6706483050668267,
+      "table_within_srcc": 0.762,
+      "table_overall_srcc": 0.671,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "MS-SSIM",
+      "raw_key": "ms-ssim",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.4508239078362601,
+        "daydreamer": 0.6645207653473291,
+        "giftmord": 0.5994979041769354,
+        "sparks15": 0.8262448657089965,
+        "vegetables": 0.7671904185303822,
+        "water": 0.8626090982796796
+      },
+      "raw_within_fisher_srcc": 0.7220957963400894,
+      "raw_overall_srcc": 0.6034463337563231,
+      "table_within_srcc": 0.722,
+      "table_overall_srcc": 0.603,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "SSIMULACRA 2",
+      "raw_key": "ssimulacra2",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.4837796246855127,
+        "daydreamer": 0.7603168222003447,
+        "giftmord": 0.6468809000397174,
+        "sparks15": 0.8473843599330643,
+        "vegetables": 0.7868916830545762,
+        "water": 0.8414818742477401
+      },
+      "raw_within_fisher_srcc": 0.7495114193576822,
+      "raw_overall_srcc": 0.6645582529579361,
+      "table_within_srcc": 0.75,
+      "table_overall_srcc": 0.665,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "Butteraugli",
+      "raw_key": "butteraugli",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": -0.4440010445823133,
+        "daydreamer": -0.35678880852111,
+        "giftmord": -0.32060777091936626,
+        "sparks15": -0.4990983026560427,
+        "vegetables": -0.6567088174731368,
+        "water": -0.5565219988901159
+      },
+      "raw_within_fisher_srcc": -0.48098872996936465,
+      "raw_overall_srcc": -0.5027070939682003,
+      "table_within_srcc": 0.481,
+      "table_overall_srcc": 0.503,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "VMAF",
+      "raw_key": "vmaf",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.5504634579976723,
+        "daydreamer": 0.6659371048975753,
+        "giftmord": 0.49713518213641494,
+        "sparks15": 0.817995306987409,
+        "vegetables": 0.48429056127773873,
+        "water": 0.704541391650473
+      },
+      "raw_within_fisher_srcc": 0.6374808409110871,
+      "raw_overall_srcc": 0.6331689084029501,
+      "table_within_srcc": 0.637,
+      "table_overall_srcc": 0.633,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "VMAF (NEG)",
+      "raw_key": "vmaf-neg",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.6459835435529279,
+        "daydreamer": 0.7671410036697127,
+        "giftmord": 0.48580446573444536,
+        "sparks15": 0.8387481031464025,
+        "vegetables": 0.6950812150431357,
+        "water": 0.7483417341557137
+      },
+      "raw_within_fisher_srcc": 0.7127168446315292,
+      "raw_overall_srcc": 0.6839598358033223,
+      "table_within_srcc": 0.713,
+      "table_overall_srcc": 0.684,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "CVVDP",
+      "raw_key": "cvvdp",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.49240475370465303,
+        "daydreamer": 0.7770553805214359,
+        "giftmord": 0.58327437841957,
+        "sparks15": 0.8036874785796556,
+        "vegetables": 0.7631986590516238,
+        "water": 0.8359424191661949
+      },
+      "raw_within_fisher_srcc": 0.7294149222122233,
+      "raw_overall_srcc": 0.6815094041588434,
+      "table_within_srcc": 0.729,
+      "table_overall_srcc": 0.682,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "PIEAPP",
+      "raw_key": "pieapp",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": -0.614572625930984,
+        "daydreamer": -0.3639992644132725,
+        "giftmord": -0.5813430063055979,
+        "sparks15": -0.8373302102411295,
+        "vegetables": -0.8636364781945741,
+        "water": -0.6392273515029526
+      },
+      "raw_within_fisher_srcc": -0.6856972282059585,
+      "raw_overall_srcc": -0.6051661020647688,
+      "table_within_srcc": 0.686,
+      "table_overall_srcc": 0.605,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "LPIPS (Alex)",
+      "raw_key": "lpips-alex",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": -0.9321576004118673,
+        "daydreamer": -0.5908711087345269,
+        "giftmord": -0.8619069953952762,
+        "sparks15": -0.9462501652370893,
+        "vegetables": -0.8344064974952796,
+        "water": -0.9276654893536398
+      },
+      "raw_within_fisher_srcc": -0.8814292710247825,
+      "raw_overall_srcc": -0.6358450298635304,
+      "table_within_srcc": 0.881,
+      "table_overall_srcc": 0.636,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "LPIPS (VGG)",
+      "raw_key": "lpips-vgg",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": -0.8047116641588984,
+        "daydreamer": -0.7368828405508165,
+        "giftmord": -0.8216056972837253,
+        "sparks15": -0.9392896000657498,
+        "vegetables": -0.9092197961132976,
+        "water": -0.943897380987935
+      },
+      "raw_within_fisher_srcc": -0.8796315703666552,
+      "raw_overall_srcc": -0.6937139233699233,
+      "table_within_srcc": 0.88,
+      "table_overall_srcc": 0.694,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "DISTS",
+      "raw_key": "dists",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": -0.9496653249880329,
+        "daydreamer": -0.66284690951522,
+        "giftmord": -0.8084723669087153,
+        "sparks15": -0.8954638193573163,
+        "vegetables": -0.7801958284450462,
+        "water": -0.8613208529118784
+      },
+      "raw_within_fisher_srcc": -0.8502344571180461,
+      "raw_overall_srcc": -0.7122514536475966,
+      "table_within_srcc": 0.85,
+      "table_overall_srcc": 0.712,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "CVQA-FR",
+      "raw_key": "cvqa-fr",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.8362513150497846,
+        "daydreamer": 0.89808803299702,
+        "giftmord": 0.7986867481979234,
+        "sparks15": 0.8678793573820082,
+        "vegetables": 0.7722123094875296,
+        "water": 0.8767797973254927
+      },
+      "raw_within_fisher_srcc": 0.8472368396561657,
+      "raw_overall_srcc": 0.7316834063626955,
+      "table_within_srcc": 0.847,
+      "table_overall_srcc": 0.732,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "CVQA-FR-MS",
+      "raw_key": "cvqa-fr-ms",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.8550463723153741,
+        "daydreamer": 0.8930664655006927,
+        "giftmord": 0.8183867437604385,
+        "sparks15": 0.8805114941744391,
+        "vegetables": 0.7410508322662552,
+        "water": 0.8857975149001012
+      },
+      "raw_within_fisher_srcc": 0.8527245313861387,
+      "raw_overall_srcc": 0.7209693927181117,
+      "table_within_srcc": 0.853,
+      "table_overall_srcc": 0.721,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "BRISQUE",
+      "raw_key": "brisque",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": -0.5258754036296752,
+        "daydreamer": -0.3928410879819223,
+        "giftmord": -0.6825469050777352,
+        "sparks15": -0.5547828240267583,
+        "vegetables": -0.08820500783707817,
+        "water": -0.6402579477971936
+      },
+      "raw_within_fisher_srcc": -0.50123922609512,
+      "raw_overall_srcc": -0.4029057472153278,
+      "table_within_srcc": 0.501,
+      "table_overall_srcc": 0.403,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "NIQE",
+      "raw_key": "niqe",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": -0.295185385684907,
+        "daydreamer": -0.33489992456275974,
+        "giftmord": -0.4654606794672727,
+        "sparks15": -0.654550924815957,
+        "vegetables": -0.10996653531805073,
+        "water": -0.5973593770494139
+      },
+      "raw_within_fisher_srcc": -0.42729521030963824,
+      "raw_overall_srcc": -0.30475449671685395,
+      "table_within_srcc": 0.427,
+      "table_overall_srcc": 0.305,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "MUSIQ",
+      "raw_key": "musiq",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.5006436829169663,
+        "daydreamer": 0.1915921137060309,
+        "giftmord": 0.42593193020131065,
+        "sparks15": 0.7722360359536034,
+        "vegetables": 0.0754571307920114,
+        "water": 0.6667958023738981
+      },
+      "raw_within_fisher_srcc": 0.4758283692108711,
+      "raw_overall_srcc": 0.4402571140362971,
+      "table_within_srcc": 0.476,
+      "table_overall_srcc": 0.44,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "CLIP-IQA+",
+      "raw_key": "clipiqa+",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.5086251455913946,
+        "daydreamer": 0.09000194051109921,
+        "giftmord": 0.5167064195579988,
+        "sparks15": 0.6852289713118603,
+        "vegetables": 0.06129282296415943,
+        "water": 0.613848917757269
+      },
+      "raw_within_fisher_srcc": 0.44066106199250227,
+      "raw_overall_srcc": 0.41133427929210864,
+      "table_within_srcc": 0.441,
+      "table_overall_srcc": 0.411,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "MDTVSFA",
+      "raw_key": "mdtvsfa",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.8556900386600861,
+        "daydreamer": 0.2429666119376884,
+        "giftmord": 0.5325436708925698,
+        "sparks15": 0.8543449251044037,
+        "vegetables": 0.11254186401402382,
+        "water": 0.02782609994450579
+      },
+      "raw_within_fisher_srcc": 0.5288776906474899,
+      "raw_overall_srcc": 0.2631352699697656,
+      "table_within_srcc": 0.529,
+      "table_overall_srcc": 0.263,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "UVQ",
+      "raw_key": "uvq",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.599510833464724,
+        "daydreamer": -0.2654992866006961,
+        "giftmord": 0.02343398164952798,
+        "sparks15": 0.8571807109149494,
+        "vegetables": -0.0591037935725823,
+        "water": 0.06724640819922234
+      },
+      "raw_within_fisher_srcc": 0.28130603085409156,
+      "raw_overall_srcc": 0.21482990798471663,
+      "table_within_srcc": 0.281,
+      "table_overall_srcc": 0.215,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "UVQ-1.5",
+      "raw_key": "uvq1p5",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.5404222630201656,
+        "daydreamer": 0.338247636226978,
+        "giftmord": 0.5304835406376663,
+        "sparks15": 0.9463790645921142,
+        "vegetables": 0.06399691809493116,
+        "water": 0.646312701025859
+      },
+      "raw_within_fisher_srcc": 0.6018864516044786,
+      "raw_overall_srcc": 0.31511479070242926,
+      "table_within_srcc": 0.602,
+      "table_overall_srcc": 0.315,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "CVQA-NR",
+      "raw_key": "cvqa-nr",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.3487384255649425,
+        "daydreamer": 0.6677397188706159,
+        "giftmord": 0.7882573387824741,
+        "sparks15": 0.923434979397699,
+        "vegetables": 0.10018028627335301,
+        "water": 0.6943642532448437
+      },
+      "raw_within_fisher_srcc": 0.6646129485632196,
+      "raw_overall_srcc": 0.48998747794728487,
+      "table_within_srcc": 0.665,
+      "table_overall_srcc": 0.49,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "CVQA-NR-MS",
+      "raw_key": "cvqa-nr-ms",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.3196447067839617,
+        "daydreamer": 0.7112599705054535,
+        "giftmord": 0.7770553805214359,
+        "sparks15": 0.9110606413153177,
+        "vegetables": -0.12001031723234576,
+        "water": 0.7750084132691983
+      },
+      "raw_within_fisher_srcc": 0.6550691229532646,
+      "raw_overall_srcc": 0.4875334733769574,
+      "table_within_srcc": 0.655,
+      "table_overall_srcc": 0.488,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "FAST-VQA",
+      "raw_key": "fastvqa",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.701725049004984,
+        "daydreamer": 0.25429732833965796,
+        "giftmord": 0.44164042339495035,
+        "sparks15": 0.8243113753836243,
+        "vegetables": 0.5150657391946171,
+        "water": 0.5548472799119744
+      },
+      "raw_within_fisher_srcc": 0.5794759440598324,
+      "raw_overall_srcc": 0.49577025843319833,
+      "table_within_srcc": 0.579,
+      "table_overall_srcc": 0.496,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "FasterVQA",
+      "raw_key": "fastervqa",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.734809499123179,
+        "daydreamer": 0.1791025740356781,
+        "giftmord": 0.6819031143730779,
+        "sparks15": 0.8855385690204065,
+        "vegetables": 0.5278136162396838,
+        "water": 0.78750439333687
+      },
+      "raw_within_fisher_srcc": 0.682762353365757,
+      "raw_overall_srcc": 0.5375526487940381,
+      "table_within_srcc": 0.683,
+      "table_overall_srcc": 0.538,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "Dover",
+      "raw_key": "dover",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.6516478073863932,
+        "daydreamer": 0.3573038410848359,
+        "giftmord": 0.2604777191043686,
+        "sparks15": 0.8691683509322562,
+        "vegetables": 0.40857589761613,
+        "water": 0.613848917757269
+      },
+      "raw_within_fisher_srcc": 0.5713572408931203,
+      "raw_overall_srcc": 0.38333742783034164,
+      "table_within_srcc": 0.549,
+      "table_overall_srcc": 0.37,
+      "absolute_aggregate_matches_table_at_3dp": false
+    },
+    {
+      "metric": "MaxVQA",
+      "raw_key": "maxvqa",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.83277551678834,
+        "daydreamer": 0.06798429841181743,
+        "giftmord": 0.2961437241423865,
+        "sparks15": 0.39211183798545507,
+        "vegetables": 0.7759465360966906,
+        "water": 0.30441238041142216
+      },
+      "raw_within_fisher_srcc": 0.5047890013901554,
+      "raw_overall_srcc": 0.3138755809206163,
+      "table_within_srcc": 0.505,
+      "table_overall_srcc": 0.314,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "Q-Align",
+      "raw_key": "qalign",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": -0.2465242100246825,
+        "daydreamer": -0.2082019138861909,
+        "giftmord": -0.05188953079538338,
+        "sparks15": 0.635344920917261,
+        "vegetables": -0.5893639720734406,
+        "water": -0.27864747305539833
+      },
+      "raw_within_fisher_srcc": -0.12066149542189311,
+      "raw_overall_srcc": 0.10762129046011333,
+      "table_within_srcc": 0.121,
+      "table_overall_srcc": 0.108,
+      "absolute_aggregate_matches_table_at_3dp": true
+    },
+    {
+      "metric": "Cover",
+      "raw_key": "cover",
+      "per_source_signed_srcc": {
+        "bigbuckbunny": 0.7480690258242455,
+        "daydreamer": 0.31301104060440943,
+        "giftmord": 0.34764698051497545,
+        "sparks15": 0.8072966605203502,
+        "vegetables": 0.4371620461414312,
+        "water": 0.6884383245529582
+      },
+      "raw_within_fisher_srcc": 0.5923981163951414,
+      "raw_overall_srcc": 0.4526533802679169,
+      "table_within_srcc": 0.592,
+      "table_overall_srcc": 0.453,
+      "absolute_aggregate_matches_table_at_3dp": true
+    }
+  ]
+}

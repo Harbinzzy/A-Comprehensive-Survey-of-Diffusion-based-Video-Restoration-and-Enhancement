@@ -1,0 +1,44 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx,booktabs,array,tabularx,multirow}
+\usepackage{xurl}
+\usepackage{xcolor,url,cite,microtype}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A Comprehensive Survey of Diffusion-based Video Restoration and Enhancement},pdfauthor={Han Zhang; Yiang Chen; Zengyuan Zuo; Kui Jiang; Junjun Jiang; Xianming Liu},pdfsubject={Diffusion-based video restoration and enhancement},pdfkeywords={video restoration, diffusion, temporal consistency, video quality assessment}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\setlength{\emergencystretch}{1em}
+\hyphenation{dif-fu-sion re-sto-ra-tion spatio-temporal}
+\begin{document}
+\bstctlcite{bstcontrol}
+\title{A Comprehensive Survey of Diffusion-based Video\\Restoration and Enhancement}
+\author{Han~Zhang, Yiang~Chen, Zengyuan~Zuo, Kui~Jiang, Junjun~Jiang,~\IEEEmembership{Senior Member,~IEEE}, and Xianming~Liu,~\IEEEmembership{Member,~IEEE}
+\thanks{H. Zhang, Y. Chen, Z. Zuo, K. Jiang, J. Jiang, and X. Liu are with the School of Computer Science and Technology, Harbin Institute of Technology, Harbin 150001, China. Corresponding author: Kui Jiang (jiangkui@hit.edu.cn).}}
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2021}%
+{Shell \MakeLowercase{\textit{et al.}}: A Comprehensive Survey of Diffusion-based Video Restoration and Enhancement}
+\maketitle
+\begin{abstract}
+Video restoration and enhancement recover visual information from sequences affected by limited resolution, noise, blur, compression, and challenging imaging conditions. Diffusion models offer expressive generative priors for reconstructing realistic detail, while introducing new challenges in preserving fidelity and temporal consistency. This survey presents a comprehensive overview of diffusion-based video restoration and enhancement, organized around the interaction of perceptual quality, fidelity, and temporal coherence. We establish a unified taxonomy of degradation assumptions, learning strategies, generative priors, conditioning mechanisms, temporal modeling, inference efficiency, and system paradigms. We review pretrained image and video priors, restoration-trained diffusion models, and related flow-matching formulations, with a focus on how these methods preserve temporal consistency. The discussion covers super-resolution, generic restoration, deblurring, adverse-weather removal, low-light and underwater enhancement, compression artifact reduction, face restoration, inpainting, and generated-video enhancement. We further examine datasets and evaluation metrics, with particular attention to backbone differences, metric reliability, and the distinction between method-level and system-level comparisons. Finally, we discuss challenges and future directions in controllable restoration, long-video processing, physically grounded enhancement, efficient deployment, and generalist restoration systems.
+\end{abstract}
+\begin{IEEEkeywords}
+Video restoration, diffusion models, generative priors, temporal consistency, video quality assessment.
+\end{IEEEkeywords}
+\input{sections/01_introduction}
+\input{sections/02_formulation}
+\section{Methodology}
+\label{sec:methodology}
+Diffusion-based video restoration combines a generative prior with mechanisms that preserve observed content and temporal structure. This section reviews four complementary design choices: the source and conditioning of the prior, temporal information exchange, learning and system organization, and efficient inference. The same mechanisms recur across restoration tasks, while their relative importance depends on the degradation and available observations.
+\input{sections/03_priors}
+\input{sections/04_temporal}
+\input{sections/06_learning_systems}
+\input{sections/07_efficiency}
+\input{sections/05_tasks}
+\input{sections/08_evaluation}
+\input{sections/09_outlook}
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+\end{document}

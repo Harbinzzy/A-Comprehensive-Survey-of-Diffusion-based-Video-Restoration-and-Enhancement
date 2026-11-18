@@ -1,0 +1,1 @@
+track,model,checkpoint_sha256,sequence_id,stratum,seed,psnr,ssim,lpips,dists,temporal_metric_name,temporal_metric_value,nr_metric_name,nr_metric_value,first_output_ms,steady_state_fps,peak_memory_gb,future_lookahead_frames,metric_or_runtime_notes

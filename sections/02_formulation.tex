@@ -1,0 +1,64 @@
+\section{Background and Taxonomy}
+\label{sec:formulation}
+\subsection{Video Restoration and Enhancement}
+Let $X=(x_1,\ldots,x_T)$ denote a clean or desired video and $Y=(y_1,\ldots,y_{T'})$ its observed counterpart. A general observation model is
+\begin{equation}
+Y=\mathcal{D}_{\phi}(X)+N,
+\label{eq:observation}
+\end{equation}
+where $\mathcal{D}_{\phi}$ represents degradation parameterized by $\phi$ and $N$ denotes residual noise. The degradation can couple spatial resolution, motion, color, exposure, and compression, and its parameters may vary over time. Spatial VSR typically preserves the number of frames, whereas interpolation and spatiotemporal super-resolution have different input and output temporal sampling. Noise can depend on the signal, and operations such as compression are nonlinear.
+
+Restoration seeks to recover information consistent with the underlying scene. Enhancement additionally concerns visibility, dynamic range, and perceptual appearance, including settings without a unique clean reference. This distinction is relevant to low-light and underwater processing, where appearance depends on illumination and rendering choices, and to generated-video enhancement, where artifacts may not follow a known physical degradation process. In both cases, the input provides structure and temporal context that constrain the desired output.
+
+For a known degradation model, generative restoration can be interpreted through
+\begin{equation}
+p(X\mid Y,\phi,c)\propto p(Y\mid X,\phi,c)\,p_{\theta}(X\mid c),
+\label{eq:posterior}
+\end{equation}
+assuming that the scene prior is independent of $\phi$ given auxiliary conditions $c$. These conditions may include reference frames, identity information, events, text, or acquisition metadata. The likelihood links the reconstructed video to its observation, while the prior models plausible content. In blind restoration, the degradation parameters may be estimated, marginalized, or handled implicitly by a conditional network. Practical diffusion restorers implement this interaction in different ways, including learned conditioning, approximate posterior guidance, and distilled prediction~\cite{ddrm,dps,seedvr2}.
+
+\subsection{Restoration Objectives}
+\textbf{Fidelity.} Fidelity concerns agreement with the underlying scene. With an aligned clean reference, it can be evaluated through a distance $d(\widehat X,X)$. Without such a reference, observation consistency, such as $\|\mathcal D_{\widehat\phi}(\widehat X)-Y\|$, tests whether the reconstruction explains the input. Observation consistency alone leaves ambiguity in detail lost during degradation, including null-space components in a linear model. Identity, geometry, text, and radiometry provide additional constraints in specialized applications.
+
+\textbf{Perceptual quality.} Perceptual quality concerns the visual plausibility and viewing quality of the reconstructed video. A sharp texture may look natural while differing from the reference, particularly when fine detail has been removed. The perception--distortion tradeoff describes this tension between distributional realism and expected reconstruction error~\cite{perception_distortion}. Perceptual similarity to a particular reference and naturalness of an output are related but distinct evaluation objectives.
+
+\textbf{Temporal consistency.} Temporal consistency requires appearance, structure, and identity to evolve in agreement with motion and visibility. Correctly restored frames may change substantially under camera motion, occlusion, or lighting changes. Consequently, temporal modeling must preserve meaningful changes while suppressing flicker, texture drift, and inconsistent reconstruction. A video prior supplies learned motion regularities, while observation-based correspondence ties those regularities to the particular sequence being restored~\cite{svd,upscale,stablevsr}.
+
+These objectives interact with computational cost. The design problem can be expressed as
+\begin{equation}
+\min_{\mathcal A}\left(
+\mathcal L_{\mathrm{fid}},\,
+\mathcal L_{\mathrm{perc}},\,
+\mathcal L_{\mathrm{temp}},\,
+\mathcal C\right),
+\label{eq:objectives}
+\end{equation}
+where $\mathcal A$ is the restoration procedure and $\mathcal C$ represents resource use. Different applications favor different operating points. Scientific or identity-sensitive video emphasizes faithful reconstruction, while entertainment enhancement may place greater weight on perceptual detail. Long-duration and interactive applications additionally constrain latency, memory, and temporal context.
+
+\subsection{Taxonomy of Diffusion-Based Video Restoration}
+\textbf{Tasks, domains, and degradations.} Super-resolution, denoising, deblurring, dehazing, and compression artifact reduction specify restoration tasks. Natural RGB, faces, underwater scenes, infrared, HDR, and generated video introduce distinct content or acquisition characteristics. Degradations can occur individually, in known combinations, or in open settings with unknown composition and severity. For example, turbulent infrared video may combine geometric distortion, blur, and limited resolution; a face video may contain noise, compression, and motion blur.
+
+\textbf{Learning and degradation knowledge.} Paired supervision learns from degraded and clean examples; unpaired and self-supervised learning use alternative training signals. Blindness describes uncertainty about the corruption at inference. Zero-shot transfer concerns generalization to a target task, domain, or sequence without corresponding training. A supervised model can therefore be blind, and a training-free method can rely on a known observation operator. Table~\ref{tab:definitions} summarizes terminology used throughout the survey.
+
+\textbf{Prior source and modeling space.} A generative prior may be learned for restoration, adapted from a pretrained image model, or inherited from a video foundation model. Pixel-space modeling operates directly on image intensities, while latent-space modeling uses a learned encoder and decoder to reduce dimensionality~\cite{ldm}. Diffusion and flow matching describe generative formulations; U-Nets and diffusion transformers describe architectures. Their combinations lead to different appearance priors, temporal capabilities, and computational costs.
+
+\textbf{Conditioning and temporal mechanisms.} Observations can guide generation through direct input, feature adapters, reference frames, physical constraints, or sampling-time guidance. Temporal dependencies can be introduced through correlated noise, flow-based propagation, recurrent state, joint attention, or temporal decoding. These choices are complementary: an image prior can acquire temporal behavior through additional modules, while a video prior still benefits from explicit observation conditioning.
+
+\textbf{Inference and system paradigms.} Iterative, few-step, and one-step models differ in the number of generative updates. Offline, windowed, and streaming processing differ in temporal access and state management. Single-task systems specialize in one restoration objective; multi-task and all-in-one models share representations across degradations. Routed and agentic systems coordinate several operators, potentially including both diffusion and conventional restoration models.
+
+\begin{table}[t]
+\caption{Terminology for learning, task coverage, and inference.}
+\label{tab:definitions}\centering\footnotesize
+\begin{tabularx}{\columnwidth}{@{}p{0.29\columnwidth}Y@{}}\toprule
+Term & Meaning \\\midrule
+Blind & Degradation parameters or types are unknown at inference. \\
+Zero-shot & Transfer to a specified task, domain, or sequence without target-specific training. \\
+Training-free & Reuse of learned model parameters without additional training; inference may still require optimization. \\
+All-in-one & A unified model addresses multiple degradation types within a shared checkpoint. \\
+One-step & Restoration uses one generative sampling update; auxiliary network costs can remain. \\
+Streaming & Frames are processed incrementally with bounded look-ahead and maintained state. \\
+Real-time & Processing keeps pace with the target frame rate under specified deployment conditions. \\\bottomrule
+\end{tabularx}
+\end{table}
+
+Together, these dimensions support comparisons beyond task names or sampling steps. Two models that both perform blind VSR may differ substantially in their pretraining, supervision, temporal context, and use of side information. Conversely, methods for different tasks may share the same principle of coupling a strong visual prior to motion and measurement constraints.
